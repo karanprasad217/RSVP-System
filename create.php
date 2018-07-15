@@ -4,8 +4,8 @@ require 'vendor/autoload.php';
 date_default_timezone_set('UTC');
 use Aws\DynamoDb\DynamoDbClient;
 use Aws\DynamoDb\Exception\DynamoDbException;
-$IAM_KEY = 'AKIAIMP6LVXBL2QTMECA';
-$IAM_SECRET = 'Lloq5Ayxj2WA6o9/8MW93TXhgCrhC8Vkg1/gZ+F7';
+$IAM_KEY = 'Your IAM KEY';
+$IAM_SECRET = 'Your IAM SECRET KEY';
 try {
 $dynamoc = DynamoDbClient::factory(
       array (
