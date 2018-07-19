@@ -4,7 +4,6 @@ error_reporting(0);
 ?>
 <?php
 require 'vendor/autoload.php';
-
 date_default_timezone_set('UTC');
 use Aws\DynamoDb\DynamoDbClient;
 use Aws\DynamoDb\Exception\DynamoDbException;
@@ -14,7 +13,7 @@ try {
 $dynamoc = DynamoDbClient::factory(
       array (
     'region'   => 'ap-south-1',
-	'credentials.cache' => false,
+    'credentials.cache' => false,
     'validation' => true,
     'version'  => 'latest'
 			) 
