@@ -16,19 +16,17 @@ $dynamoc = DynamoDbClient::factory(
     'credentials.cache' => false,
     'validation' => true,
     'version'  => 'latest'
-			) 
+		) 
 	); //factory
 }  //try
 catch (Exception $e) {
-               
-                die("Error: " . $e->getMessage());
+               die("Error: " . $e->getMessage());	//Prints error
         }
 ?>
 <?php echo"<div style='width:20px; height:20px; background:#F00; position:absolute; display:block; top:0; left:0; -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);clip-path: polygon(0 0, 0% 100%, 100% 0);'></div>"?>
 <?php echo"<div style='width:20px; height:20px; background:#F00; position:absolute; display:block; top:0; right:0; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);clip-path: polygon(0 0, 100% 0, 100% 100%);'></div>"?>
 <?php echo"<div style='width:20px; height:20px; background:#F00; position:absolute; display:block; bottom:0; right:0; -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);clip-path: polygon(100% 0, 100% 100%, 0 100%);'></div>"?>
 <?php echo"<div style='width:20px; height:20px; background:#F00; position:absolute; display:block; bottom:0; left:0; -webkit-clip-path: polygon(0 100%, 100% 100%, 0 0);clip-path: polygon(0 100%, 100% 100%, 0 0);'></div>"?>
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -282,9 +280,7 @@ $("#che1").keyup(function(){
 document.onkeydown = fkey;
 document.onkeypress = fkey;
 document.onkeyup = fkey;
-
 var wasPressed = false;
-
 function fkey(e){
         e = e || window.event;
        if( wasPressed ) return; 
